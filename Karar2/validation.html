@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation</title>
+    <!-- 2nd/January/2023 -->
+    <style>
+        body{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        button{
+            background-color: black;
+            color: gold;
+            width: 225px;
+            border: 1px;
+            border-radius: 10px;
+            height: 20px;
+            transition: 0.2s ease;
+        }
+        button:hover{
+            color: black;
+            background-color: gold;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <label for="">Name</label>
+        <input type="text" id="Name">
+        <span id="u_name"></span>
+        <br><br>
+        <label for="">Age</label>
+        <input type="text" id="Age">
+        <span id="u_age"></span>
+        <br><br>
+        <label for="">Email</label>
+        <input type="text" id="Email">
+        <span id="u_email"></span>
+        <br><br>
+        <button type="button" onclick="fun()" >Submit</button>
+    </form>
+
+
+
+    <script>
+        function fun(){
+            let nm = document.getElementById("Name").value;
+            let ag = document.getElementById("Age").value;
+            let em = document.getElementById("Email").value;
+
+            if (nm == "" && ag == "" && em == ""){
+                document.getElementById("u_name").innerHTML = "Fill Out This Before Submit";
+                document.getElementById("u_age").innerHTML = "Fill Out This Before Submit";
+                document.getElementById("u_email").innerHTML = "Fill Out This Before Submit";
+            }
+            else if(nm != "" && ag =="" && em == ""){
+                document.getElementById("u_name").innerHTML = "";
+                document.getElementById("u_age").innerHTML = "Fill Out This Before Submit";
+                document.getElementById("u_email").innerHTML = "Fill Out This Before Submit";
+            }
+            else if(nm != "" && ag !="" && em == ""){
+                document.getElementById("u_name").innerHTML = "";
+                document.getElementById("u_age").innerHTML = "";
+                document.getElementById("u_email").innerHTML = "Fill Out This Before Submit";
+            }
+        }
+
+
+
+    </script>
+</body>
+</html>

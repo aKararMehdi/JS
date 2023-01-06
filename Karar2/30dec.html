@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript30/12/22</title>
+</head>
+<style>
+    body{
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 32px;
+    }
+</style>
+<body>
+    <form action="">
+        <label for="">Age</label>
+        <input type="text" id="a" >
+        <br><br>
+        <label for="">Nationality</label>
+        <input type="text" id="n" >
+        <button type="button" onclick="fun()">SUBMIT</button>
+    </form>
+
+    <p id="para"></p>
+
+
+    <script>
+        // let age = 21;
+        // let nationality = "Mexican";
+
+        // if(age == 21 && nationality == "Mexican"){
+        //     document.write("eligible");
+        // }
+
+        // else{
+        //     document.write("uneligible");
+        // }
+
+        function fun(){
+            let age = document.getElementById("a").value;
+            let nationality = document.getElementById("n").value;
+
+            if(age >= 21 && age<=25 && nationality == "Mexican" || nationality == "pakistani"){
+             document.getElementById("para").innerHTML = "eligible";
+            }
+            else{
+                document.getElementById("para").innerHTML = "not eligible";
+            }
+        }
+    </script>
+</body>
+</html>

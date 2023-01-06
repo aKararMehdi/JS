@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MarkSheet</title>
+    
+</head>
+<style>
+    body{
+        font-family: 'Franklin Gothic Medium', sans-serif;
+    }
+</style>
+<body>
+    
+    <form action="">
+        <label for="">Name</label>
+        <input type="Text" id="inp"> <br><br>
+        <label for="">English</label>
+        <input type="Number" id="eng"> <br><br>
+        <label for="">Urdu</label>
+        <input type="Number" id="ud"> <br><br>
+        <label for="">Physics</label>
+        <input type="Number" id="phy"> <br><br>
+        <label for="">Chemistry</label>
+        <input type="Number" id="che"> <br><br>
+        <label for="">Computer</label>
+        <input type="Number" id="com"> <br><br>
+        <button type="button" onclick="fun()" >Submit</button>
+    </form>
+    
+    <p id="para"></p>
+    <br>
+    <span id="en"></span>
+    <br>
+    <span id="ur"></span>
+    <br>
+    <span id="ph"></span>
+    <br>
+    <span id="ch"></span>
+    <br>
+    <span id="co"></span>
+    <br>
+
+    <tr>
+        <td>Percentage:</td>
+        <td id="per"></td>
+    </tr>
+
+
+
+    <script>
+        function fun(){
+    
+    
+        
+            var user_name = document.getElementById("inp").value;
+            var english = document.getElementById("eng").value;
+            var urdu = document.getElementById("ud").value;
+            var physics = document.getElementById("phy").value;
+            var chemistry = document.getElementById("che").value;
+            var computer = document.getElementById("com").value;
+               document.getElementById("para").innerHTML = user_name;
+               document.getElementById("en").innerHTML = "english:" + english;
+               document.getElementById("ur").innerHTML = "urdu: " + urdu;
+               document.getElementById("ph").innerHTML = "physics: " + physics;
+               document.getElementById("ch").innerHTML = "chemistry: " + chemistry;
+               document.getElementById("co").innerHTML = "computer: " + computer;
+               document.getElementById("per").innerHTML=per;
+    
+        }
+    </script>
+</body>
+</html>
