@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+    <!-- Monday9thJanuary2023 -->
+    <style>
+        body{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            background: url(./abstract.jpg);
+            height: auto;
+            width: auto;
+            color: white;
+        }
+        button{
+            width: 110px;
+            height: 40px;
+            color: black;
+            background-color: gold;
+            text-decoration: none;
+            border: none;
+            transition: 0.2s ease;
+        }
+        button:hover{
+            color: gold;
+            background-color: black;
+        }
+
+    </style>
+</head>
+<body>
+    <form action="">
+        <label for="">ENTER NUMBER 1:</label>
+        <input type="text" id="num1">
+        <br>
+        <br>
+        <form action="">
+        <label for="">ENTER NUMBER 2:</label>
+        <input type="text" id="num2">
+        <br>
+        <br>
+        <button type="button" onclick="sum()"> + </button>
+        <br>
+        <br>
+        <button type="button" onclick="sub()">-</button>
+        <br>
+        <br>
+        <button type="button" onclick="divide()"> / </button>
+        <br>
+        <br>
+        <button type="button" onclick="multiply()"> * </button>
+        <br>
+        <br>
+        <button type="button" onclick="percent()"> % </button>
+       
+        <p id="para"></p>
+
+        <script>
+            function sum(){
+                var num1 = parseInt(document.getElementById("num1").value);
+
+                var num2 = parseInt(document.getElementById("num2").value);
+                
+                let c = num1+num2;
+
+                document.getElementById("para").innerHTML= num1+ num2 ;
+            }
+
+            function sub(){
+                var num1 = parseInt(document.getElementById("num1").value);
+
+                var num2 = parseInt(document.getElementById("num2").value);
+                
+                let c = num1-num2;
+
+                document.getElementById("para").innerHTML= num1- num2 ;
+            }
+
+            function divide(){
+                var num1 = parseInt(document.getElementById("num1").value);
+
+                var num2 = parseInt(document.getElementById("num2").value);
+                
+                let c = num1/num2;
+
+                document.getElementById("para").innerHTML= num1/num2 ;
+            }
+
+            function multiply(){
+                var num1 = parseInt(document.getElementById("num1").value);
+
+                var num2 = parseInt(document.getElementById("num2").value);
+                
+                let c = num1*num2;
+
+                document.getElementById("para").innerHTML= num1*num2 ;
+            }
+
+            function percent(){
+                var num1 = parseInt(document.getElementById("num1").value);
+
+                var num2 = parseInt(document.getElementById("num2").value);
+                
+                let c = num1%num2;
+
+                document.getElementById("para").innerHTML= num1%num2 ;
+            }
+        </script>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi Dimensional</title>
+    <!-- Monday9thJanuary2023 -->
+</head>
+<body>
+
+
+<div id="para"></div>
+
+
+
+    <script>
+        let students =
+        [
+            ["sarim",21,"BS","sarim2004@gmail.com"],
+            ["farhan",18,"MBBS","farhankhan@gmail.com"],
+            ["Salman",18,"MS","SalmanKhan@gmail.com"]
+        ];
+
+        let para = document.getElementById("para");
+
+        for(let i = 0 ; i<students.length; i++){
+            for(let j = 0 ; j<students[i].length ; j++){
+                para.innerHTML += students[i][j]
+            }
+            "<br>"
+        }
+
+
+
+
+
+        // document.write(students[0][0] + "<br>", students[1][2] + "<br>" , students[2][3]);
+
+
+        // for(let i = 0; i<students.length; i++){
+        //     let pa = document.getElementById("para");
+        //     pa.innerHTML +=(students [i] + "<br>"); 
+        // }
+    </script>
+</body>
+</html>
